@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count Character Occurrences</title>
+  <script>
+    function countOccurrences() {
+      const inputString = document.getElementById("inputString").value;
+      const character = document.getElementById("character").value;
+      let count = 0;
+      
+      for (let i = 0; i < inputString.length; i++) {
+        if (inputString.charAt(i) === character) {
+          count++;
+        }
+      }
+      
+      document.getElementById("result").innerText = `The character '${character}' appears ${count} time(s).`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Count Character Occurrences</h1>
+  <label for="inputString">Enter a string: </label>
+  <input type="text" id="inputString"><br><br>
+  
+  <label for="character">Enter a character to count: </label>
+  <input type="text" id="character" maxlength="1"><br><br>
+
+  <button onclick="countOccurrences()">Count Occurrences</button>
+  <p id="result"></p>
+</body>
+</html>

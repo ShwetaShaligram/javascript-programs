@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check if String Starts and Ends with Same Character</title>
+  <script>
+    function checkStartAndEnd() {
+      const inputString = document.getElementById("inputString").value;
+      if (inputString.charAt(0) === inputString.charAt(inputString.length - 1)) {
+        document.getElementById("result").innerText = "The string starts and ends with the same character.";
+      } else {
+        document.getElementById("result").innerText = "The string does not start and end with the same character.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Check if String Starts and Ends with Same Character</h1>
+  <label for="inputString">Enter a string: </label>
+  <input type="text" id="inputString"><br><br>
+
+  <button onclick="checkStartAndEnd()">Check</button>
+  <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split String into Words</title>
+  <script>
+    function splitIntoWords() {
+      const inputString = document.getElementById("inputString").value;
+      const wordsArray = inputString.split(" ");
+      
+      document.getElementById("result").innerText = "Array of words: " + JSON.stringify(wordsArray);
+    }
+  </script>
+</head>
+<body>
+  <h1>Split String into Array of Words</h1>
+  <label for="inputString">Enter a sentence: </label>
+  <input type="text" id="inputString">
+  <button onclick="splitIntoWords()">Split String</button>
+  <p id="result"></p>
+</body>
+</html>

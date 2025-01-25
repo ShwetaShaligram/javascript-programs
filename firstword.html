@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extract First Word</title>
+  <script>
+    function extractFirstWord() {
+      const sentence = document.getElementById("inputSentence").value;
+      const firstWord = sentence.split(" ")[0];
+      
+      document.getElementById("result").innerText = "First word: " + firstWord;
+    }
+  </script>
+</head>
+<body>
+  <h1>Extract First Word</h1>
+  <label for="inputSentence">Enter a sentence: </label>
+  <input type="text" id="inputSentence">
+  <button onclick="extractFirstWord()">Extract First Word</button>
+  <p id="result"></p>
+</body>
+</html>
